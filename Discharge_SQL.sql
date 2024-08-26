@@ -149,7 +149,7 @@ FROM discharge_dup;
 
 -- Which country has the most employees laid off?
 
-SELECT country, MAX(total_laid_off)
+SELECT country, SUM(total_laid_off)
 FROM discharge_dup
 GROUP BY country
 ORDER BY 2 DESC
